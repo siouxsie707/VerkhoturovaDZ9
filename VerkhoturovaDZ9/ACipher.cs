@@ -11,19 +11,15 @@
                 if (char.IsLetter(c))
                 {
                     char shiftedChar = (char)(c + 1);
-                    if (char.IsLower(c) && shiftedChar > 'z')
+                    if ((c == 'я') || (c == 'Я'))
                     {
-                        shiftedChar = 'a';
-                    }
-                    if (char.IsUpper(c) && shiftedChar > 'Z')
-                    {
-                        shiftedChar = 'A';
+                        shiftedChar = (c == 'я') ? 'а' : 'А'; // Цикличный сдвиг для «я»
                     }
                     result[i] = shiftedChar;
                 }
                 else
                 {
-                    result[i] = c;
+                    result[i] = c; // Если не буква, оставляем без изменений
                 }
             }
             return new string(result);
@@ -38,19 +34,15 @@
                 if (char.IsLetter(c))
                 {
                     char shiftedChar = (char)(c - 1);
-                    if (char.IsLower(c) && shiftedChar < 'a')
+                    if ((c == 'а') || (c == 'А'))
                     {
-                        shiftedChar = 'z';
-                    }
-                    if (char.IsUpper(c) && shiftedChar < 'A')
-                    {
-                        shiftedChar = 'Z';
+                        shiftedChar = (c == 'а') ? 'я' : 'Я'; // Цикличный сдвиг для «а»
                     }
                     result[i] = shiftedChar;
                 }
                 else
                 {
-                    result[i] = c;
+                    result[i] = c; // Если не буква, оставляем без изменений
                 }
             }
             return new string(result);

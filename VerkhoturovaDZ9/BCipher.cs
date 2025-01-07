@@ -10,14 +10,20 @@
                 char c = input[i];
                 if (char.IsLetter(c))
                 {
-                    char shiftedChar = char.IsLower(c)
-                        ? (char)('z' - (c - 'a'))
-                        : (char)('Z' - (c - 'A'));
+                    char shiftedChar;
+                    if (char.IsLower(c))
+                    {
+                        shiftedChar = (char)('я' - (c - 'а')); // сдвижение вниз по алфавиту
+                    }
+                    else // uppercase letters
+                    {
+                        shiftedChar = (char)('Я' - (c - 'А'));
+                    }
                     result[i] = shiftedChar;
                 }
                 else
                 {
-                    result[i] = c;
+                    result[i] = c; // Если не буква, оставляем без изменений
                 }
             }
             return new string(result);
@@ -31,14 +37,20 @@
                 char c = input[i];
                 if (char.IsLetter(c))
                 {
-                    char shiftedChar = char.IsLower(c)
-                        ? (char)('a' + ('z' - c))
-                        : (char)('A' + ('Z' - c));
+                    char shiftedChar;
+                    if (char.IsLower(c))
+                    {
+                        shiftedChar = (char)('а' + ('я' - c)); // сдвижение вверх по алфавиту
+                    }
+                    else // uppercase letters
+                    {
+                        shiftedChar = (char)('А' + ('Я' - c));
+                    }
                     result[i] = shiftedChar;
                 }
                 else
                 {
-                    result[i] = c;
+                    result[i] = c; // Если не буква, оставляем без изменений
                 }
             }
             return new string(result);
