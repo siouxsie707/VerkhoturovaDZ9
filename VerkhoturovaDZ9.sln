@@ -5,7 +5,7 @@ VisualStudioVersion = 17.12.35506.116 d17.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VerkhoturovaDZ9", "VerkhoturovaDZ9\VerkhoturovaDZ9.csproj", "{4BD0E91B-88D9-4958-8EEC-50FC0FFEFC67}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_9", "lab_9\lab_9.csproj", "{21D9EE09-621B-49BB-BA18-6123620B2F64}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DZ9", "lab_9\DZ9.csproj", "{21D9EE09-621B-49BB-BA18-6123620B2F64}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
